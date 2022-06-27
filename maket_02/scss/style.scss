@@ -1,0 +1,480 @@
+@import "null.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+//подключение шрифта
+body{
+   font-family: 'Roboto', sans-serif;
+}
+
+//кнопка возвращения к началу при скролле
+
+.buttonToStart{
+   padding: 1%;
+   margin: 2%;
+   position: fixed;
+   left: 83.55%;
+   z-index: 10;
+   color:gray;
+   background-color: rgb(206, 206, 206);
+   border-radius: 4px;
+   display: none;
+   &:hover{
+      cursor: pointer;
+   }
+
+}
+.buttonToStart-show{
+   display: block;
+}
+//ограничитель контента
+.contentBorder{
+   max-width: 1204px;
+   margin: 0px auto;
+}
+//первая страница(меню, лого, фото, приветствие)
+.container_head{
+
+      margin-top: 5%;
+
+      display: flex;
+
+      flex-direction: column;
+
+      //верхние элементы
+      .up_box_mainPage{
+
+
+         .up_box_mainPage_row{
+         
+         margin-bottom: 30%;
+         
+         display:flex;
+         justify-content: space-between;
+
+            .up_box_mainPage__firstItem{
+
+               width: 35%;
+               img{
+                  max-width: 50%;
+               }
+               
+               //border: 1px solid black;
+            }
+
+            .up_box_mainPage_secondItem{
+
+               //border: 1px solid black;
+               width: 65%;
+               //margin-right: 20%;
+
+               .up_box_mainPage__secondItem_container{
+
+                  display: flex;
+                  justify-content: space-between;
+                  
+
+                  .up_box_mainPage_secondItem_menuItem{
+
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: flex-start;
+                     width: 50%;
+                     //border: 1px solid black;
+
+
+                     .up_box_mainPage_secondItem_menuButton_container{
+                       
+                        padding: 0 1%;
+
+                        &:hover{
+                           cursor: pointer;
+                           background-color: rgb(206, 206, 206);
+                           border-radius: 4px;
+                        }
+                        &:active{
+                           background: rgb(228, 195, 253);
+                           border-radius: 4px;
+                           box-shadow: 0px 0px 10px;
+                        }
+
+                        .up_box_mainPage_secondItem_menuButton_text{
+                           font-size: 20px;
+                           color: gray;
+                        }
+
+                     }
+
+                     .up_box_mainPage_secondItem_menuButton_container_project{
+                       
+                        padding: 0 1%;
+
+                        &:hover {
+                           cursor: pointer;
+                           background-color: rgb(206, 206, 206);
+                           border-radius: 4px; 
+                           transition-duration: 200ms ;
+                           .downMenu{
+                              display: block;
+                           }
+                        }
+
+                        
+                        
+
+                        .up_box_mainPage_secondItem_menuButton_text_project{
+                           
+                           font-size: 20px;
+                           color: gray;
+
+                        }
+
+                        .downMenu{
+                           display: none;
+                           position: relative;
+                           //background-color: rgb(206, 206, 206);
+                           border-radius: 4px;
+
+                           li{
+                              color: gray;
+                              text-align: center;
+                              padding: 5% 0;
+                              transition-duration: 100ms ;
+
+                              &:hover{
+                                 cursor:pointer;
+                                 color:rgb(168, 168, 168);
+                                 box-shadow: 0px 0px 10px;
+                                 border-radius: 4px;
+                              }
+                              &:active{
+                                 color:rgb(139, 121, 121);
+                              }
+                              &:last-child{
+                                 margin-bottom: 5%;
+                              }
+                           }
+                           
+                        }
+
+                        }
+                        
+                  }
+               }
+
+                  .up_box_mainPage_secondItem_logotypeItem{
+
+                     display: flex;
+                     justify-content: flex-end;
+                     
+                     //border: 1px solid black;
+                     //padding: 0 1%;
+                     width: 50%;
+
+                     .up_box_mainPage_secondItem_logoContainer{ 
+                        width: 10%;
+                        margin-left: 1%;
+
+                        transition-duration: 120ms, 120ms, 220ms;
+                        transition-property: border-radius, box-shadow, padding ;
+                        &:hover{
+
+                           cursor: pointer;
+
+                           border-radius: 50%;
+
+                           box-shadow: 0px 0px 5px;
+
+                        }
+                        &:active{
+
+                           cursor: pointer;
+
+                           border-radius: 50%;
+
+                           box-shadow: rgb(255, 0, 115) 0px 0px 5px ;
+
+                           padding: 0.8%;
+
+                        }
+                        .up_box_mainPage_secondItem_logoImg{
+                           max-width: 100%;
+                           img{
+                              //border: 1px solid black;
+                              max-width: 100%;
+                           }
+                        }
+                     }
+                  }
+               }
+
+            }
+
+
+         }
+      
+   
+      //Слова приветствия и фотка разработчика
+      .down_box_mainPage{
+
+         display: flex;
+
+         .down_box_mainPage_helloContainer{
+            //border: 1px solid black;
+            width: 70%;
+            .down_box_mainPage_helloText{
+
+               font-size: 45px;
+               text-transform: uppercase;
+               font-weight: bold;
+
+               span{
+                  color: rgb(255, 0, 89);
+               }
+            }
+         }
+
+         .down_box_mainPage_fotoContainer{
+               //border: 1px solid black;
+               width: 30%;
+               
+               .down_box_mainPage_fotoFoto{
+                  max-width: 100%;
+                  background-image: 
+                  /* Old browsers */
+                   rgb(236,232,157);
+                  /* FF3.6-15 */
+                  background: -moz-linear-gradient(top, rgb(255, 0, 89) 0%, rgba(94,83,115,1) 50%, rgb(39, 182, 168) 100%);
+                  /* Chrome10-25,Safari5.1-6 */
+                  background: -webkit-linear-gradient(top, rgba(255, 0, 89,1) 0%,rgba(94,83,115,1) 50%,rgba(24,181,164,1) 100%);
+                  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                  background: linear-gradient(to bottom, rgba(255, 0, 89,1) 0%,rgba(94,83,115,1) 50%,rgba(24,181,164,1) 100%);
+                  border-radius: 50%;
+
+               img{
+                  
+                  padding: 2%;
+                  max-width: 100%;
+                  border-radius: 50%;
+                  //border: 2px solid black;
+               }
+            }
+         }
+      }
+}
+
+.container_technolodgies{
+
+   margin: 20% auto;
+
+   display: flex;
+   flex-direction: column;
+
+   .up_box__technologies{
+
+      .up_box_technologies_headerContainer{
+         text-align: center;
+         
+         .up_box_technologies_headerText{
+
+               color:gray;
+               font-size: 28px;
+               font-weight: bold;
+               margin-bottom: 1%;
+         }
+      }
+
+   }
+
+   //иконки технологий
+   .down_box__technologies{
+
+      .down_box_technologies_containerIkon{
+
+         margin-top: 10%;
+
+         display: flex;
+         justify-content: space-between;
+
+         .down_box_technologies_ikonContainer{
+
+           // border: 1px solid black;
+
+            width: 5%;
+
+            .down_box_technologies_ikonImg{
+               max-width: 100%;
+               max-height: 100%;
+               img{
+                  max-width: 100%;
+                  max-height: 100%;
+               }
+            }
+
+         }
+      }
+
+   }
+}
+
+.containerFooter{
+
+   display:flex;
+   flex-direction: column;
+
+      .footer_upBox{
+      
+      //border: 1px solid black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+         .footer_upBox_logoImg{
+
+            width: 20%;
+
+            img{
+               max-width: 100%;
+            }
+         }
+
+         .footer_upBox_infoContainer{
+
+            width: 45%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2%;
+            //border: 1px solid black;
+
+            .numberPhoneContainer{
+               width: 25%;
+               //border: 1px solid black;
+               .numberPhone{
+
+                  color:gray;
+
+               }
+            }
+
+         }
+         .postContainer{
+            width: 40%;
+            //border: 1px solid black;
+            .Post{
+               font-size: 12px;
+               color:gray;
+            }
+         }
+         .SocialNetwork{
+            width: 35% ;
+            display:flex;
+            //border: 1px solid black;
+            justify-content: end;
+
+            %logoType{
+               display: block;
+               width: 25%;
+               transition-duration: 120ms, 120ms, 220ms;
+               transition-property: border-radius, box-shadow, padding ;
+               &:hover{
+
+                  cursor: pointer;
+
+                  border-radius: 50%;
+
+                  box-shadow: 0px 0px 5px;
+
+               }
+               &:active{
+
+                  cursor: pointer;
+
+                  border-radius: 50%;
+
+                  box-shadow: rgb(255, 0, 115) 0px 0px 5px ;
+
+                  padding: 0.8%;
+
+               }
+            }
+
+            .vk_footer{
+
+               @extend %logoType;
+
+               img{
+                  max-width: 100%;
+               }
+            }
+            .inst_footer{
+
+                @extend %logoType;
+
+               img{
+                  max-width: 100%;
+               }
+            }
+            .gmail_footer{
+
+                @extend %logoType;
+
+               img{
+                  max-width: 100%;
+               }
+            }
+         }
+      }
+
+      .footer_downBox{
+
+         display: flex;
+         justify-content: space-between;
+
+         border-top: 1px solid gray;
+         padding: 5% 0;
+
+         .up_box_mainPage_secondItem_menuItem{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 45%;
+            //border: 1px solid black;
+
+
+            .up_box_mainPage_secondItem_menuButton_container{
+              
+               padding: 0 1%;
+               transition-duration: 120ms;
+               &:hover{
+                  cursor: pointer;
+                  background-color: rgb(206, 206, 206);
+                  border-radius: 4px;
+               }
+               &:active{
+                  background: rgb(228, 195, 253);
+                  border-radius: 4px;
+                  box-shadow: 0px 0px 10px;
+               }
+               .up_box_mainPage_secondItem_menuButton_text{
+                  font-size: 20px;
+                  color: gray;
+               }
+            }
+
+         }
+
+         .footer_authorAndDesign{
+            text-align: end;
+            width: 50%;
+            .authorAndDesignText{
+               color:gray;
+               font-size: 20px;
+            }
+         }
+
+      }
+
+}
